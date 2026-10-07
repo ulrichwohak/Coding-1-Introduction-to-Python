@@ -9,6 +9,8 @@ import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 
+import pandas as pd
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data" / "raw"
@@ -22,7 +24,7 @@ class Dataset:
 
 
 DATASETS = (
-    Dataset("hotel_vienna_raw.csv", "https://osf.io/yzntm/download", "Hotels Vienna raw data"),
+    Dataset("hotel_vienna_raw.csv", "https://osf.io/yzntm/download", "Hotels Europe raw data (legacy local filename)"),
     Dataset("hotels_europe_price.csv", "https://osf.io/p6tyr/download", "Hotels Europe prices"),
     Dataset("hotels_europe_features.csv", "https://osf.io/utwjs/download", "Hotels Europe features"),
     Dataset("sp500.csv", "https://osf.io/4pgrf/download", "S&P 500 data"),
@@ -59,6 +61,49 @@ def download(dataset: Dataset, force: bool) -> None:
     temp.replace(target)
 
 
+def prepare_pandas_quotes() -> None:
+    """Supply a small joined table; students calculate nightly prices in class."""
+    prices = pd.read_csv(DATA_DIR / "hotels_europe_price.csv")
+    features = pd.read_csv(DATA_DIR / "hotels_europe_features.csv")
+
+    # A single source period has both one- and four-night quotes. Exact check-in
+    # dates are not supplied, so this is not an identical-date price comparison.
+    period = prices.loc[
+        (prices["year"] == 2017)
+        & (prices["month"] == 12)
+        & (prices["holiday"] == 1)
+        & (prices["weekend"] == 0)
+    ]
+    joined = period.merge(
+        features, on="hotel_id", how="left", validate="many_to_one", indicator=True
+    )
+    if not joined["_merge"].eq("both").all():
+        raise ValueError("Some hotel quotes have no matching hotel characteristics")
+
+    quotes = joined.loc[
+        (joined["city"] == "Vienna") & (joined["accommodation_type"] == "Hotel")
+    ].copy()
+    quotes = quotes.rename(
+        columns={"rating": "ratings", "rating_reviewcount": "rating_count"}
+    )
+    columns = [
+        "hotel_id", "city", "year", "month", "weekend", "holiday", "nnights",
+        "neighbourhood", "stars", "price", "ratings", "rating_count", "distance",
+        "ratingta",
+    ]
+    quotes = quotes[columns].sort_values(["hotel_id", "nnights"])
+    if quotes.empty or quotes["nnights"].isna().any() or not quotes["nnights"].gt(0).all():
+        raise ValueError("Teaching quotes must have observed, positive stay lengths")
+    if quotes.duplicated(["hotel_id", "nnights"]).any():
+        raise ValueError("Expected one quote per hotel and stay length in this period")
+
+    # Do not precompute price_per_night or remove missing ratings/star categories.
+    target = ROOT / "lectures" / "lecture04-pandas-basics" / "hotel_vienna_quotes.csv"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    quotes.to_csv(target, index=False, lineterminator="\n")
+    print(f"prepared: {target.relative_to(ROOT)} ({len(quotes)} quotes)")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--force", action="store_true", help="re-download files that already exist")
@@ -67,7 +112,8 @@ def main() -> int:
     try:
         for dataset in DATASETS:
             download(dataset, force=args.force)
-    except RuntimeError as exc:
+        prepare_pandas_quotes()
+    except (RuntimeError, ValueError) as exc:
         print(exc, file=sys.stderr)
         return 1
     return 0
