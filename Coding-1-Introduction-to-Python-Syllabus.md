@@ -248,9 +248,11 @@ block rather than the end of the first, so that pandas has a full session of its
 
 ### Sessions 4–6
 
-**Session 4 — 7 October · Plotting and control flow**
+**Session 4 — 7 October · Control flow and plotting**
 
-- matplotlib first: the `Figure` and `Axes` objects, axis limits, legends, log scales, a
+- Conditionals and control flow: the anatomy of `if`/`else`, `for` loops, `while` loops, and
+  list comprehensions.
+- Plotting with matplotlib first: the `Figure` and `Axes` objects, axis limits, legends, log scales, a
   second axis, bar spacing and grids, charts within charts. Students meet the explicit,
   step-by-step plotting model before any higher-level abstraction, so that they know what a
   figure is actually made of.
@@ -258,14 +260,12 @@ block rather than the end of the first, so that pandas has a full session of its
   the same ideas: `geoms`, continuous and discrete scales, limits and break points,
   annotation with lines, points and text; bar charts (simple, stacked, percentage), box
   plots, violin plots, colour values.
-- Conditionals and control flow: the anatomy of `if`/`else`, `for` loops, `while` loops, and
-  list comprehensions.
-- Materials: `lectures/lecture05-graphs-basics`, `lectures/lecture06-conditionals`.
-- Voluntary practice, in this order: `exercises/lecture05-matplotlib.ipynb`,
-  `exercises/lecture05-plotnine-i.ipynb`, `exercises/lecture05-plotnine-ii.ipynb`,
-  `exercises/lecture06-control-flow-i.ipynb`, `exercises/lecture06-control-flow-ii.ipynb`.
-- **In-class assignment (10 min):** comment a figure script layer by layer, saying what each
-  call adds, and annotate a loop with the state of its variables.
+- Materials: `lectures/lecture05-conditionals`, `lectures/lecture06-graphs-basics`.
+- Voluntary practice, in this order: `exercises/lecture05-control-flow-i.ipynb`,
+  `exercises/lecture05-control-flow-ii.ipynb`, `exercises/lecture06-matplotlib.ipynb`,
+  `exercises/lecture06-plotnine-i.ipynb`, `exercises/lecture06-plotnine-ii.ipynb`.
+- **In-class assignment (10 min):** annotate a loop with the state of its variables, and
+  comment a figure script layer by layer, saying what each call adds.
 
 **Session 5 — 14 October · Functions, exception handling, and descriptive statistics**
 

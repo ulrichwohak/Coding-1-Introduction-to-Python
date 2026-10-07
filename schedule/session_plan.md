@@ -14,7 +14,7 @@ separately from the six teaching sessions.
 | 1 | Wed 16 Sep | Setup and general coding principles | `lectures/lecture00-intro`, `lectures/lecture01-coding-basics` | none - workflow walkthrough and practice commit | `lecture01-coding-basics-i`, `lecture01-coding-basics-ii` |
 | 2 | Wed 23 Sep | Basic data structures and file I/O | `lectures/lecture02-basic-structures`, `lectures/lecture03-data-IO` | predict-then-verify on variables, a dictionary lookup, and arithmetic | `lecture02-basic-structures-i`, `lecture02-basic-structures-ii`, `lecture03-data-io-i`, `lecture03-data-io-ii` |
 | 3 | Wed 30 Sep | Data containers: pandas | `lectures/lecture04-pandas-basics` | name the concept over a pandas pipeline | `lecture04-pandas-basics-i`, `lecture04-pandas-basics-ii`, `lecture04-pandas-munging-i`, `lecture04-pandas-munging-ii` |
-| 4 | Wed 7 Oct | Plotting (matplotlib first, then plotnine) and control flow | `lectures/lecture05-graphs-basics`, `lectures/lecture06-conditionals` | comment a figure script layer by layer; annotate loop state | `lecture05-matplotlib`, `lecture05-plotnine-i`, `lecture05-plotnine-ii`, `lecture06-control-flow-i`, `lecture06-control-flow-ii` |
+| 4 | Wed 7 Oct | Control flow, then plotting (matplotlib before plotnine) | `lectures/lecture05-conditionals`, `lectures/lecture06-graphs-basics` | annotate loop state; comment a figure script layer by layer | `lecture05-control-flow-i`, `lecture05-control-flow-ii`, `lecture06-matplotlib`, `lecture06-plotnine-i`, `lecture06-plotnine-ii` |
 | 5 | Wed 14 Oct | Functions, exception handling, descriptive statistics | `lectures/lecture08-functions`, `lectures/lecture09-exception-handling`, `lectures/lecture07-data-exploration` (part 1) | docstring three functions; explain a raised exception | `lecture08-functions-i`, `lecture08-functions-ii`, `lecture09-exceptions`, `lecture07-data-exploration-i` |
 | 6 | Wed 21 Oct | Association, hypothesis tests, wrap-up | `lectures/lecture07-data-exploration` (part 2); optional `lectures/lecture10-intro-to-regression` | name the concept over correlation and bin-scatter | `lecture07-data-exploration-ii`; optional `lecture10-regression-i`, `lecture10-regression-ii` |
 
@@ -61,7 +61,8 @@ separately from the six teaching sessions.
   Sessions bundle several lectures, so one session draws on several prefixes; use the table
   above to see which. This decoupling is deliberate: session packing may change, but an
   exercise always belongs to its lecture.
-- **Session 4 order.** matplotlib is taught before plotnine so students see the explicit
+- **Session 4 order.** Conditionals and control flow are taught before plotting. Within
+  plotting, matplotlib is taught before plotnine so students see the explicit
   `Figure`/`Axes` model before the grammar-of-graphics abstraction.
 - **Session 5 splits `lecture07`.** The natural breakpoints in that lecture are
   hypothesis-testing and association; part 1 stops before hypothesis testing.

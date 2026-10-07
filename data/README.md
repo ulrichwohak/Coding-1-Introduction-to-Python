@@ -11,9 +11,9 @@ Downloaded source files in `data/raw/` are ignored by Git so the repository stay
 | Local file | Source | Used by |
 | --- | --- | --- |
 | `data/raw/hotel_vienna_raw.csv` | <https://osf.io/yzntm/download> | lecture04 additional raw-data cleaning practice (`exercises/lecture04-pandas-munging-ii.ipynb`) |
-| `data/raw/hotels_europe_price.csv` | <https://osf.io/p6tyr/download> | lecture04 quote-sample preparation; lecture05 plotnine |
-| `data/raw/hotels_europe_features.csv` | <https://osf.io/utwjs/download> | lecture04 quote-sample preparation; lecture05 plotnine |
-| `data/raw/sp500.csv` | <https://osf.io/4pgrf/download> | lecture05 matplotlib and function practice |
+| `data/raw/hotels_europe_price.csv` | <https://osf.io/p6tyr/download> | lecture04 quote-sample preparation; lecture06 plotnine |
+| `data/raw/hotels_europe_features.csv` | <https://osf.io/utwjs/download> | lecture04 quote-sample preparation; lecture06 plotnine |
+| `data/raw/sp500.csv` | <https://osf.io/4pgrf/download> | lecture06 matplotlib and function practice |
 | `data/raw/billion_prices.csv` | <https://osf.io/yhbr5/download> | lecture07 data exploration |
 | `data/raw/hotels_vienna.csv` | <https://osf.io/y6jvb/download> | lecture10 regression |
 

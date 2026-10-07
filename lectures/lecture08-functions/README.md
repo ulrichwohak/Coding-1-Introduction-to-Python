@@ -31,7 +31,7 @@ Ideal overall time: **20-30 mins**.
 
 ## Homework
 
-*Type*: quick practice, approx 15 mins, together with [`lecture06-conditionals`](../lecture06-conditionals/).
+*Type*: quick practice, approx 15 mins, together with [`lecture05-conditionals`](../lecture05-conditionals/).
 
 Bootstrapping - using the [`sp500`](https://gabors-data-analysis.com/datasets/#sp500) data
 

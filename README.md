@@ -18,7 +18,7 @@ This course will **not** use artificial intelligence tools or large language mod
 
 The course meets once per week for 100 minutes, on Wednesdays 15:40-17:20, for six sessions. The ordered plan is in `schedule/session_plan.md`.
 
-The first sessions introduce the Python working environment, notebooks, variables, expressions, strings, core data structures, and file I/O. The middle sessions develop pandas, data cleaning, visualization, and control flow. The final sessions cover functions, exceptions, and exploratory data analysis. Introductory regression is optional material that previews Coding 2.
+The first sessions introduce the Python working environment, notebooks, variables, expressions, strings, core data structures, and file I/O. The middle sessions develop pandas, data cleaning, control flow, and visualization. The final sessions cover functions, exceptions, and exploratory data analysis. Introductory regression is optional material that previews Coding 2.
 
 ## Course Materials
 

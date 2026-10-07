@@ -1,4 +1,4 @@
-# Lecture 06: Conditional Programming
+# Lecture 05: Conditional Programming
 
 ## Motivation
 

@@ -1,4 +1,4 @@
-# Lecture 05: graphs basics
+# Lecture 06: graphs basics
 
 ## Motivation
 
