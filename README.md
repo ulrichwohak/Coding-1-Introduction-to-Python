@@ -31,6 +31,23 @@ The first sessions introduce the Python working environment, notebooks, variable
 - `schedule/session_plan.md`: ordered session plan for the 2026 course
 - `Coding-1-Introduction-to-Python-Syllabus.md`: the course syllabus, aligned with the CEU study guide entry for ECBS5208
 
+### Live Class Notebooks
+
+The notebooks ending in `_duplicate.ipynb` contain the code we developed together
+in class. They sit alongside the prepared lecture notebooks:
+
+- [Python basics: variables, numbers, and strings](lectures/lecture01-coding-basics/coding_basics_duplicate.ipynb)
+- [Collections: lists, tuples, dictionaries, and sets](lectures/lecture02-basic-structures/basic_structures_duplicate.ipynb)
+- [File paths with `os`](lectures/lecture03-data-IO/data_IO_duplicate.ipynb)
+- [Pandas: exploring and filtering hotel data](lectures/lecture04-pandas-basics/01_pandas_basics_duplicate.ipynb)
+
+To run them, use `uv sync` and then `uv run jupyter lab` from the repository root.
+Run one cell at a time: the basics and collections notebooks retain examples that
+raise errors (dividing a string, sorting a list containing numbers and a nested
+list, and changing a tuple). After inspecting an error, continue with the next
+cell. Saved outputs are cleared, so rerun cells to see their results. The pandas
+notebook needs an internet connection to read the course's hotel CSV from GitHub.
+
 ## Learning Outcomes
 
 By the end of Coding 1, students should be able to:
