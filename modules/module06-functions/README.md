@@ -31,6 +31,7 @@ After successfully live-coding the material (see: [`functions.ipynb`](functions.
 - how to document inputs, returned values, and side effects in a docstring
 - the use of the `help` function to retrieve function descriptions
 - how to use a `lambda` with `sorted()` to order hotel tuples by price, and how `key` works
+- how the parameter in `lambda hotel: hotel[1]` plays the same role as `x` in `def f(x)`
 
 ## Module Time
 
