@@ -16,15 +16,20 @@ Writing good functions is a lifetime journey. Even after using Python for many y
 ## This module
 
 This module introduces functions, how they are structured and how to write them.
+It compares positional and keyword arguments using the same power function,
+including default values and mixed calls. The docstring example distinguishes
+Python's general PEP 257 conventions from the optional NumPy-style layout.
 
 
 ## Learning outcomes
 After successfully live-coding the material (see: [`functions.ipynb`](functions.ipynb)), students will know on
 
-- how to create user definded functions
+- how to create user-defined functions
 - what is the structure of a function
-- the use of `docstring`s to document functions
-- the use of the `help` function to retreive function descriptions
+- the difference between parameters and arguments, and how default values work
+- how to call functions with positional arguments, keyword arguments, or both
+- how to document inputs, returned values, and side effects in a docstring
+- the use of the `help` function to retrieve function descriptions
 - the use of `lambda` function
 
 ## Module Time
@@ -46,5 +51,9 @@ Bootstrapping - using the [`sp500`](https://gabors-data-analysis.com/datasets/#s
 
 
 ## Further material
+
+  - [Python tutorial: keyword arguments](https://docs.python.org/3.12/tutorial/controlflow.html#keyword-arguments)
+  - [PEP 257: Docstring Conventions](https://peps.python.org/pep-0257/)
+  - [NumPy-style docstring guide](https://numpydoc.readthedocs.io/en/latest/format.html)
 
   - Case study materials from Gabor's da_case_studies repository on generalization (with bootstrapping) is: [ch05-stock-market-loss-generalize](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch05-stock-market-loss-generalize) on testing are: [ch06-online-offline-price-test](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch06-online-offline-price-test) and [ch06-stock-market-loss-test](https://github.com/gabors-data-analysis/da_case_studies/tree/master/ch06-stock-market-loss-test)
