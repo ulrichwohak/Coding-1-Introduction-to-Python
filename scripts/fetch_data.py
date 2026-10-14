@@ -98,7 +98,7 @@ def prepare_pandas_quotes() -> None:
         raise ValueError("Expected one quote per hotel and stay length in this period")
 
     # Do not precompute price_per_night or remove missing ratings/star categories.
-    target = ROOT / "lectures" / "lecture04-pandas-basics" / "hotel_vienna_quotes.csv"
+    target = ROOT / "modules" / "module04-pandas-basics" / "hotel_vienna_quotes.csv"
     target.parent.mkdir(parents=True, exist_ok=True)
     quotes.to_csv(target, index=False, lineterminator="\n")
     print(f"prepared: {target.relative_to(ROOT)} ({len(quotes)} quotes)")

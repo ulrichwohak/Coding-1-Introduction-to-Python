@@ -9,26 +9,40 @@ There is no reading week inside the course: the six sessions run on six consecut
 Wednesdays. The final exam takes place on **Friday, 6 November 2026 at 13:30**,
 separately from the six teaching sessions.
 
-| Session | Date | Topic | Lecture materials | In-class assignment | Voluntary practice (at home) |
+| Session | Date | Topic | Module materials | In-class assignment | Voluntary practice (at home) |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Wed 16 Sep | Setup and general coding principles | `lectures/lecture00-intro`, `lectures/lecture01-coding-basics` | none - workflow walkthrough and practice commit | `lecture01-coding-basics-i`, `lecture01-coding-basics-ii` |
-| 2 | Wed 23 Sep | Basic data structures and file I/O | `lectures/lecture02-basic-structures`, `lectures/lecture03-data-IO` | predict-then-verify on variables, a dictionary lookup, and arithmetic | `lecture02-basic-structures-i`, `lecture02-basic-structures-ii`, `lecture03-data-io-i`, `lecture03-data-io-ii` |
-| 3 | Wed 30 Sep | Data containers: pandas | `lectures/lecture04-pandas-basics` | name the concept over a pandas pipeline | `lecture04-pandas-basics-i`, `lecture04-pandas-basics-ii`, `lecture04-pandas-munging-i`, `lecture04-pandas-munging-ii` |
-| 4 | Wed 7 Oct | Control flow, then plotting (matplotlib before plotnine) | `lectures/lecture05-conditionals`, `lectures/lecture06-graphs-basics` | annotate loop state; comment a figure script layer by layer | `lecture05-control-flow-i`, `lecture05-control-flow-ii`, `lecture06-matplotlib`, `lecture06-plotnine-i`, `lecture06-plotnine-ii` |
-| 5 | Wed 14 Oct | Functions, exception handling, descriptive statistics | `lectures/lecture08-functions`, `lectures/lecture09-exception-handling`, `lectures/lecture07-data-exploration` (part 1) | docstring three functions; explain a raised exception | `lecture08-functions-i`, `lecture08-functions-ii`, `lecture09-exceptions`, `lecture07-data-exploration-i` |
-| 6 | Wed 21 Oct | Association, hypothesis tests, wrap-up | `lectures/lecture07-data-exploration` (part 2); optional `lectures/lecture10-intro-to-regression` | name the concept over correlation and bin-scatter | `lecture07-data-exploration-ii`; optional `lecture10-regression-i`, `lecture10-regression-ii` |
+| 1 | Wed 16 Sep | Setup and general coding principles | `modules/module00-intro`, `modules/module01-coding-basics` | none - workflow walkthrough and practice commit | `module01-coding-basics-i`, `module01-coding-basics-ii` |
+| 2 | Wed 23 Sep | Basic data structures and file I/O | `modules/module02-basic-structures`, `modules/module03-data-IO` | predict-then-verify on variables, a dictionary lookup, and arithmetic | `module02-basic-structures-i`, `module02-basic-structures-ii`, `module03-data-io-i`, `module03-data-io-ii` |
+| 3 | Wed 30 Sep | Data containers: pandas | `modules/module04-pandas-basics` | [Assignment 3: lists, indexing, and types](https://github.com/ulrichwohak/coding1-assignment-03-lists), originally `backup`; used instead of the planned pandas assignment | `module04-pandas-basics-i`, `module04-pandas-basics-ii`, `module04-pandas-munging-i`, `module04-pandas-munging-ii` |
+| 4 | Wed 7 Oct | Pandas continued: inspecting and filtering hotel data | `modules/module04-pandas-basics/01_pandas_basics_duplicate.ipynb` (live class notebook) | cancelled: repository unavailable; excluded from grading, not a zero | `module04-pandas-basics-i`, `module04-pandas-basics-ii` |
+| 5 | Wed 14 Oct | Conditionals and control flow, then functions | `modules/module05-conditionals`, then `modules/module06-functions` | [Assignment 4: conditionals, loops, and functions](https://github.com/ulrichwohak/coding1-assignment-04-plotting-control-flow); predict the output and explain `return` versus `print` | `module05-control-flow-i`, `module05-control-flow-ii`, `module06-functions-i`, `module06-functions-ii` |
+| 6 | Wed 21 Oct | Graphing and wrap-up: matplotlib before plotnine | `modules/module07-graphs-basics` | comment a figure script, explaining what each call adds | `module07-matplotlib`, `module07-plotnine-i`, `module07-plotnine-ii` |
 
-## Open tasks
+## Optional modules and exam scope
 
-- **No assessment materials exist yet.** The grading scheme requires 5 quizzes (20%), 5
-  in-class assignment repositories (20%), and a closed-book final (60%). None are written.
-- **Five template repositories to build**, one per graded session. Each holds a README with
-  the task, a 25-40 line uncommented `.py` script using that session's concepts, and a
+`module08-data-exploration`, `module09-exception-handling`, and
+`module10-intro-to-regression` are optional and **outside the final exam scope**.
+Their practice notebooks remain available in `exercises/`, with the same module prefixes.
+The pandas inspection and summaries already taught in Module 04 remain core material;
+making Module 08 optional does not exclude those earlier skills.
+
+## Assessment delivery notes
+
+- **Assignment numbers follow delivery, not session numbers.** Assignment 1 was
+  ungraded practice; Assignment 2 ran on 23 September; Assignment 3 (formerly
+  `backup`) ran on 30 September. No assignment took place on 7 October, so the
+  next assignment on 14 October is Assignment 4, the third graded assignment.
+- **Revised assignment weights.** The 7 October assignment did not take place because
+  students could not access its repository. It is excluded for everyone, not scored as
+  zero. The four assignments in Sessions 2, 3, 5, and 6 each contribute **5%** of the final
+  grade (20% combined). The five quizzes remain 20% combined, and the final exam remains 60%.
+- **Assignment repositories.** Each holds a README with
+  the task, a short uncommented `.py` script using that session's concepts, and a
   rubric. Use `.py` rather than `.ipynb`: a comment-only change to a notebook produces an
   unreadable JSON diff, whereas in a script `git diff` shows exactly the added lines, so
   grading is reading a diff.
 - **Distribution is fork-based.** One assignment repository per graded session, published
-  at the end of the lecture; students fork it, commit to their fork, and push. Nothing is
+  at the end of the session; students fork it, commit to their fork, and push. Nothing is
   emailed: GitHub lists a repository's forks, so collection is just enumerating them
   (`gh api repos/OWNER/REPO/forks`), and each fork's compare view against the source shows
   exactly the lines a student added. Collect GitHub usernames in Session 1 to map forks to
@@ -56,19 +70,22 @@ separately from the six teaching sessions.
 
 ## Notes
 
-- **Exercise filenames follow the lecture, not the session.** Exercises are named
-  `lectureNN-topic.ipynb`, matching the `lectures/lectureNN-*` directory they practise.
-  Sessions bundle several lectures, so one session draws on several prefixes; use the table
+- **Exercise filenames follow the module, not the session.** Exercises are named
+  `moduleNN-topic.ipynb`, matching the `modules/moduleNN-*` directory they practise.
+  Sessions bundle several modules, so one session draws on several prefixes; use the table
   above to see which. This decoupling is deliberate: session packing may change, but an
-  exercise always belongs to its lecture.
-- **Session 4 order.** Conditionals and control flow are taught before plotting. Within
-  plotting, matplotlib is taught before plotnine so students see the explicit
-  `Figure`/`Axes` model before the grammar-of-graphics abstraction.
-- **Session 5 splits `lecture07`.** The natural breakpoints in that lecture are
-  hypothesis-testing and association; part 1 stops before hypothesis testing.
-- **Regression is optional** and not examinable in Coding 1. It previews Coding 2
-  (ECBS5306).
-- **SQL is not taught in this course.** `lectures/lecture01-coding-basics/README.md`,
-  `lectures/lecture02-basic-structures/`, and `exercises/lecture01-coding-basics-ii.ipynb`
+  exercise always belongs to its module.
+- **Session 4 records the actual class.** On 7 October, students developed
+  `01_pandas_basics_duplicate.ipynb`: inspecting the hotel DataFrame, selecting columns,
+  creating price per night, checking missing ratings, and filtering by price and rating.
+- **Session 5 order.** Module 05 (conditionals and control flow) comes immediately before
+  Module 06 (functions). The intentional `while True` example is interrupted manually;
+  run that cell individually, not with Run All.
+- **Session 6 order.** Module 07 starts with `02_matplotlib_intro.ipynb`, followed by
+  `01_plotnine_intro.ipynb`, so students see the explicit `Figure`/`Axes` model first.
+- **Modules 08–10 are optional** and not examinable in Coding 1. Regression previews
+  Coding 2 (ECBS5306).
+- **SQL is not taught in this course.** `modules/module01-coding-basics/README.md`,
+  `modules/module02-basic-structures/`, and `exercises/module01-coding-basics-ii.ipynb`
   still contain SQL string-building examples inherited from the upstream material; they are
   not part of the syllabus.

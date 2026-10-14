@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CHECK_ROOTS = ["README.md", "lectures", "exercises", "data", "schedule"]
+CHECK_ROOTS = ["README.md", "modules", "exercises", "data", "schedule"]
 PATTERNS = (
     re.compile(r"(?<!uv\s)\bpip\b", re.IGNORECASE),
     re.compile(r"\bpip3\b", re.IGNORECASE),

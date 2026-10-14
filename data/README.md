@@ -1,27 +1,27 @@
 # Data
 
-The repository keeps small local teaching files with the relevant lecture folders. Larger or external datasets are downloaded into `data/raw/` by:
+The repository keeps small local teaching files with the relevant module folders. Larger or external datasets are downloaded into `data/raw/` by:
 
 ```bash
 uv run python scripts/fetch_data.py
 ```
 
-Downloaded source files in `data/raw/` are ignored by Git so the repository stays lightweight. The script also prepares the small lecture04 CSV described below. The lecture04 introduction reads that prepared CSV directly from GitHub; students do not need to run this script for that lesson.
+Downloaded source files in `data/raw/` are ignored by Git so the repository stays lightweight. The script also prepares the small module04 CSV described below. The module04 introduction reads the local prepared CSV included in the repository; students do not need to run this script for that lesson.
 
 | Local file | Source | Used by |
 | --- | --- | --- |
-| `data/raw/hotel_vienna_raw.csv` | <https://osf.io/yzntm/download> | lecture04 additional raw-data cleaning practice (`exercises/lecture04-pandas-munging-ii.ipynb`) |
-| `data/raw/hotels_europe_price.csv` | <https://osf.io/p6tyr/download> | lecture04 quote-sample preparation; lecture06 plotnine |
-| `data/raw/hotels_europe_features.csv` | <https://osf.io/utwjs/download> | lecture04 quote-sample preparation; lecture06 plotnine |
-| `data/raw/sp500.csv` | <https://osf.io/4pgrf/download> | lecture06 matplotlib and function practice |
-| `data/raw/billion_prices.csv` | <https://osf.io/yhbr5/download> | lecture07 data exploration |
-| `data/raw/hotels_vienna.csv` | <https://osf.io/y6jvb/download> | lecture10 regression |
+| `data/raw/hotel_vienna_raw.csv` | <https://osf.io/yzntm/download> | module04 additional raw-data cleaning practice (`exercises/module04-pandas-munging-ii.ipynb`) |
+| `data/raw/hotels_europe_price.csv` | <https://osf.io/p6tyr/download> | module04 quote-sample preparation; module07 plotnine |
+| `data/raw/hotels_europe_features.csv` | <https://osf.io/utwjs/download> | module04 quote-sample preparation; module07 plotnine |
+| `data/raw/sp500.csv` | <https://osf.io/4pgrf/download> | module07 matplotlib and function practice |
+| `data/raw/billion_prices.csv` | <https://osf.io/yhbr5/download> | module08 data exploration |
+| `data/raw/hotels_vienna.csv` | <https://osf.io/y6jvb/download> | module10 regression |
 
-## Prepared GitHub-hosted sample for the pandas introduction
+## Prepared local sample for the pandas introduction
 
-[`lectures/lecture04-pandas-basics/hotel_vienna_quotes.csv`](../lectures/lecture04-pandas-basics/hotel_vienna_quotes.csv) is the prepared CSV for the question-led DataFrame introduction, versioned and published together with the notebook on `main`. The notebook uses `pd.read_csv` with the [direct GitHub CSV URL](https://raw.githubusercontent.com/ulrichwohak/Coding-1-Introduction-to-Python/main/lectures/lecture04-pandas-basics/hotel_vienna_quotes.csv). Students need an internet connection, but no local combined CSV, manual data download, or repository update to obtain the data.
+[`modules/module04-pandas-basics/hotel_vienna_quotes.csv`](../modules/module04-pandas-basics/hotel_vienna_quotes.csv) is the prepared CSV for the question-led DataFrame introduction, versioned together with the notebook. The notebook uses `pd.read_csv` with this local file. Its loading cell finds the repository root, so it works when launched from either the root or the module folder. Once students have the repository, this lesson does not need an internet connection or a separate data download.
 
-Merging and sample preparation happen in `scripts/fetch_data.py`, not in the lecture notebook. The detailed counts below document the prepared data for maintainers; the notebook asks students to discover these features by running code.
+Merging and sample preparation happen in `scripts/fetch_data.py`, not in the module notebook. The detailed counts below document the prepared data for maintainers; the notebook asks students to discover these features by running code.
 
 ### Sources and reproducible preparation
 
@@ -52,11 +52,11 @@ Rows are quotes, not unique hotels. Some hotels therefore contribute more than o
 
 The source identifies December 2017 holiday weekday stays but does not supply exact check-in dates. Converting a total quote into a nightly price makes the units comparable; it does not establish identical travel dates or otherwise equivalent stays. Nearby municipalities are included in the Vienna search area. This is a selected historical teaching sample, not a representative or current sample of hotels.
 
-The notebook's default GitHub URL serves this prepared CSV, not an unprepared OSF source file. Updates to the prepared CSV and any notebook changes that depend on them should be committed and published together.
+The notebook reads this prepared local CSV, not an unprepared OSF source file. Updates to the prepared CSV and any notebook changes that depend on them should be committed and published together.
 
 ## Existing sample retained for exercises
 
-[`lectures/lecture04-pandas-basics/hotel_vienna_restricted.csv`](../lectures/lecture04-pandas-basics/hotel_vienna_restricted.csv) remains unchanged for the existing lecture04 exercises that use it. It is not downloaded or regenerated by `fetch_data.py`.
+[`modules/module04-pandas-basics/hotel_vienna_restricted.csv`](../modules/module04-pandas-basics/hotel_vienna_restricted.csv) remains unchanged for the existing module04 exercises that use it. It is not downloaded or regenerated by `fetch_data.py`.
 
 The file contains 217 distinct hotels and 29 columns: one-night weekday quotes for the Vienna search area in November 2017, restricted to hotel star categories from 3 to 4 (including 3.5). Nearby municipalities are included. It is a prepared subset, not a representative or current sample of hotels. The primary guest ratings are complete; three alternative Tripadvisor ratings and their review counts are missing.
 

@@ -1,0 +1,31 @@
+# Module 05: Conditional Programming
+
+Teach this module immediately before [Module 06: Functions](../module06-functions/).
+The notebook contains a deliberate infinite `while True` loop. Run that cell alone,
+use the notebook toolbar's Interrupt/Stop button, then inspect the counter in the next
+cell. Do not use Run All for this demonstration.
+
+## Motivation
+
+Deciding what to do on a case by case is widely used in decision making and also in programming. Conditional programming enables writing codes with this in mind. If a certain condition holds execute a command otherwise do something different. Conditional programming is an element of the basic programming technique, which emerges in multiple situations. Adding this technique to the programming toolbox is a must for data scientists.
+
+## This module
+
+This module introduces students to conditional programming with `if-else` statements. It covers the essentials control flows as `for` and `while` loop and list comprehension.
+
+
+## Learning outcomes
+After successfully live-coding the material (see: [`conditionals_and_control_flows.ipynb`](conditionals_and_control_flows.ipynb)), students will have knowledge on
+
+- how a conditional statement works
+- what are the crucial elements of an `if-else` statement
+- what is a `for` loop
+- what is a `while` loop
+- wow to create a list comprehension
+
+
+## Module Time
+
+Ideal overall time: **10-20 mins**.
+
+This is a relatively short module, and it can be even shorter if logical operators with vectors is neglected. Although good understanding of the anatomy of an `if-else` statement is important

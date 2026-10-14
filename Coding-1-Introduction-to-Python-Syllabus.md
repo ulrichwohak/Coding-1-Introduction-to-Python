@@ -32,7 +32,7 @@ is introduced. See the AI policy below.
 - Students are expected to bring their own laptops to follow the coding classes.
 
 No prior programming experience is assumed. Students should complete the environment setup
-described in `lectures/lecture00-intro/setup.md` before or during Session 1.
+described in `modules/module00-intro/setup.md` before or during Session 1.
 
 ## Waiting list handling
 
@@ -49,7 +49,7 @@ priority. All other students will be placed on the waiting list.
 - Work with structured datasets using pandas.
 - Create visualizations using matplotlib and plotnine.
 - Use loops, conditionals, and functions to automate tasks.
-- Perform exploratory data analysis.
+- Inspect and summarize data with pandas. Further exploratory data analysis is optional.
 
 **Other outcomes.** The course will also help develop skills in the following areas:
 
@@ -61,20 +61,21 @@ priority. All other students will be placed on the waiting list.
 **Supporting outcomes specific to this delivery.** Students will additionally be able to
 work in a reproducible project environment managed by `uv`, use JupyterLab as a structured
 environment for exploratory coding, construct reliable file paths with basic encoding
-awareness, and handle common data-workflow failures with defensive coding and exceptions.
+awareness. Exception handling is available as an optional extension outside the exam scope.
 
 ## Learning activities and teaching methods
 
-The course will be conducted as a series of interactive lectures during which we go through
-concepts and applications together. In addition, students will have in-class quizzes and a
-graded in-class assignment at the end of each lecture.
+The course will be conducted as a series of interactive sessions during which we go through
+concepts and applications together. In addition, students will have in-class quizzes and
+graded in-class assignments at the end of Sessions 2, 3, 5, and 6. The Session 4
+assignment on 7 October did not take place and does not count towards the grade.
 
 Each session follows the same shape:
 
 1. A short start-of-class quiz on the previous session (from Session 2 onward).
-2. Live-coded walkthrough of the session's lecture notebook(s) from `lectures/`.
+2. Live-coded walkthrough of the session's module notebook(s) from `modules/`.
 3. A 10-minute graded in-class assignment, completed and committed before you leave the
-   room (from Session 2 onward).
+   room (Sessions 2, 3, 5, and 6; the Session 4 assignment was cancelled).
 
 All materials are distributed through the course repository. Students clone the repository,
 create the environment with `uv sync`, download external datasets with
@@ -82,7 +83,7 @@ create the environment with `uv sync`, download external datasets with
 notebooks are worked through by hand, not by pasting completed solutions.
 
 **Voluntary practice.** The repository also contains a set of short practice notebooks in
-`exercises/`, one or two per lecture. These are optional, are not collected, and are not
+`exercises/`, one or two per module. These are optional, are not collected, and are not
 graded. They exist purely so that you can rehearse the material at your own pace. Work
 through them at home if you find them useful, and skip them if you do not.
 
@@ -104,23 +105,28 @@ The final grade is based on:
 | Component | Weight | Detail |
 | --- | --- | --- |
 | Start-of-the-class quiz | 20% | 5 quizzes at the start of Sessions 2–6, 4% each. Short, closed-book, on the previous session's material. |
-| In-class assignments | 20% | 5 assignments, 4% each, at the end of Sessions 2–6. Completed and committed during class; nothing is done or submitted from home. |
-| Closed-book final exam | 60% | Written, closed-book, no computer. Covers the whole course. **Friday, 6 November 2026 at 13:30.** The exam is separate from the six teaching sessions. |
+| In-class assignments | 20% | 4 assignments, 5% each, at the end of Sessions 2, 3, 5, and 6 (23 September, 30 September, 14 October, and 21 October). The 7 October assignment did not take place and is excluded, not scored as zero. Completed and committed during class; nothing is done or submitted from home. |
+| Closed-book final exam | 60% | Written, closed-book, no computer. Covers the core course material; optional Modules 08–10 are excluded. **Friday, 6 November 2026 at 13:30.** The exam is separate from the six teaching sessions. |
 
 ### In-class assignments
 
-The last ten minutes of each session from Session 2 onward are a short, graded assignment.
+The last ten minutes of Sessions 2, 3, 5, and 6 are a short, graded assignment.
 It asks you to *read* code rather than write it, which is the harder and more useful skill
 at this stage.
 
-**What you will do.** At the end of the lecture I publish a small assignment repository and
+The assignment planned for Session 4 (7 October) could not take place because the
+assignment repository was unavailable to students. It is excluded for everyone, with
+no penalty. Each of the four remaining assignments contributes 5% of the final grade,
+so the assignment component remains 20%.
+
+**What you will do.** At the end of the session I publish a small assignment repository and
 give you the link. You **fork** it to your own GitHub account, which gives you your own copy
-to work in. It contains a README with the task and a single Python script, thirty or so
-lines long, that uses the concepts we covered that day — and carries no comments at all. You
-work through the script and add the comments yourself. Depending on the session, that means
+to work in. It contains a README with the task and a short Python script, typically five or
+six lines of code, using the concepts we covered that day. Question prompts may already be
+included as comments; you add your own answers below them. Depending on the session, that means
 one of:
 
-- **Naming the mechanism.** Against each block, say which concept from the lecture it relies
+- **Naming the mechanism.** Against each block, say which concept from the module it relies
   on and what it produces.
 - **Predicting, then verifying.** Before running anything, write down the value you expect a
   line to produce. Commit that. Then run the script and, in a second commit, correct the
@@ -187,12 +193,12 @@ with an AI tool.
 
 ## Course contents
 
-The course runs over six 100-minute sessions. Lecture material lives in `lectures/`. Each
-session ends with a graded in-class assignment from Session 2 onward. The voluntary
-practice notebooks listed under each session are optional homework: work through them if you
-find them useful, but they are never collected. The two blocks below follow the study
-guide's grouping, with one adjustment: plotting is delivered at the start of the second
-block rather than the end of the first, so that pandas has a full session of its own.
+The course runs over six 100-minute sessions. Teaching units live in `modules/`; a session
+can cover more than one module. Pandas continues through Session 4. Session 5 covers
+conditionals and control flow, followed immediately by functions, and Session 6 covers
+graphing. Sessions 2, 3, 5, and 6 end with a graded in-class assignment. The Session 4
+assignment was cancelled and is not counted.
+The practice notebooks in `exercises/` are voluntary and are never collected.
 
 ### Sessions 1–3
 
@@ -210,9 +216,9 @@ block rather than the end of the first, so that pandas has a full session of its
 - General coding principles: how to name variables, why and how to comment scripts.
 - Variables, assignment, and the primitive types (integers, floats, booleans); expressions
   and operators; string manipulation and formatting.
-- Materials: `lectures/lecture00-intro`, `lectures/lecture01-coding-basics`.
-- Voluntary practice: `exercises/lecture01-coding-basics-i.ipynb`,
-  `exercises/lecture01-coding-basics-ii.ipynb`.
+- Materials: `modules/module00-intro`, `modules/module01-coding-basics`.
+- Voluntary practice: `exercises/module01-coding-basics-i.ipynb`,
+  `exercises/module01-coding-basics-ii.ipynb`.
 - **No graded assignment.** The session closes with a walkthrough of the submission
   workflow and a first practice commit, so the mechanics are settled before they carry
   marks.
@@ -225,9 +231,9 @@ block rather than the end of the first, so that pandas has a full session of its
 - Opening files for reading, reading text line by line, handling encodings; writing,
   appending, and overwriting; working directories, listing files, OS-specific paths,
   creating directories.
-- Materials: `lectures/lecture02-basic-structures`, `lectures/lecture03-data-IO`.
-- Voluntary practice: `exercises/lecture02-basic-structures-i.ipynb` through
-  `exercises/lecture03-data-io-ii.ipynb`.
+- Materials: `modules/module02-basic-structures`, `modules/module03-data-IO`.
+- Voluntary practice: `exercises/module02-basic-structures-i.ipynb` through
+  `exercises/module03-data-io-ii.ipynb`.
 - **In-class assignment (10 min):** predict-then-verify. Read a short script using variables,
   a dictionary lookup, and simple arithmetic. Comment the code, predict its two printed
   values, commit, then run and correct any wrong prediction.
@@ -240,67 +246,69 @@ block rather than the end of the first, so that pandas has a full session of its
   methods on Series, filtering and tabulating values, missing values, replacing values,
   handling duplicates, chaining operations, and sorting.
 - Data: hotels-vienna, hotels-europe.
-- Materials: `lectures/lecture04-pandas-basics`.
-- Voluntary practice: `exercises/lecture04-pandas-basics-i.ipynb` through
-  `exercises/lecture04-pandas-munging-ii.ipynb`.
-- **In-class assignment (10 min):** name the concept. Comment each step of an uncommented
-  pandas munging pipeline with the operation it performs and why.
+- Materials: `modules/module04-pandas-basics`.
+- Voluntary practice: `exercises/module04-pandas-basics-i.ipynb` through
+  `exercises/module04-pandas-munging-ii.ipynb`.
+- **In-class assignment 3 (10 min):** the lists exercise originally called `backup`.
+  Predict the printed values, explain indexing, and identify the Python types. This
+  replaced the planned pandas assignment.
 
 ### Sessions 4–6
 
-**Session 4 — 7 October · Control flow and plotting**
+**Session 4 — 7 October · Pandas continued**
 
-- Conditionals and control flow: the anatomy of `if`/`else`, `for` loops, `while` loops, and
-  list comprehensions.
-- Plotting with matplotlib first: the `Figure` and `Axes` objects, axis limits, legends, log scales, a
-  second axis, bar spacing and grids, charts within charts. Students meet the explicit,
-  step-by-step plotting model before any higher-level abstraction, so that they know what a
-  figure is actually made of.
-- plotnine and the grammar of graphics, introduced second as a more compact way to express
-  the same ideas: `geoms`, continuous and discrete scales, limits and break points,
-  annotation with lines, points and text; bar charts (simple, stacked, percentage), box
-  plots, violin plots, colour values.
-- Materials: `lectures/lecture05-conditionals`, `lectures/lecture06-graphs-basics`.
-- Voluntary practice, in this order: `exercises/lecture05-control-flow-i.ipynb`,
-  `exercises/lecture05-control-flow-ii.ipynb`, `exercises/lecture06-matplotlib.ipynb`,
-  `exercises/lecture06-plotnine-i.ipynb`, `exercises/lecture06-plotnine-ii.ipynb`.
-- **In-class assignment (10 min):** annotate a loop with the state of its variables, and
-  comment a figure script layer by layer, saying what each call adds.
+- Inspecting the hotel DataFrame: columns, shape, data types, unique hotels, and value counts.
+- Selecting and copying columns; calculating price per night; inspecting numerical
+  summaries and missing ratings.
+- Boolean filters: selecting affordable rooms and combining price and rating conditions
+  to find good deals.
+- Live class material: `modules/module04-pandas-basics/01_pandas_basics_duplicate.ipynb`.
+- Voluntary practice: `exercises/module04-pandas-basics-i.ipynb`,
+  `exercises/module04-pandas-basics-ii.ipynb`.
+- **No graded assignment:** the planned assignment could not take place and is excluded
+  from the grade. The other four assignments each carry 5% of the final grade.
 
-**Session 5 — 14 October · Functions, exception handling, and descriptive statistics**
+**Session 5 — 14 October · Conditionals and control flow then functions**
 
-- User-defined functions: structure, arguments, return values, docstrings, `help`, `lambda`
-  functions, and refactoring repeated code into reusable helpers.
-- Exception handling: `try` and `except`, identifying exception types, and selecting actions
-  based on the type of error encountered.
-- Data exploration, part 1: `describe` and `skim` for quick summaries; means, medians,
-  standard deviations, percentiles, counts of missing values; grouped descriptives with
-  `groupby` and `agg`; histograms and kernel densities, and the role of bin width and
-  bandwidth.
-- Materials: `lectures/lecture08-functions`, `lectures/lecture09-exception-handling`,
-  `lectures/lecture07-data-exploration` (first part).
-- Voluntary practice: `exercises/lecture08-functions-i.ipynb`,
-  `exercises/lecture08-functions-ii.ipynb`, `exercises/lecture09-exceptions.ipynb`,
-  `exercises/lecture07-data-exploration-i.ipynb`.
-- **In-class assignment (10 min):** write a docstring for each of three functions, and explain
-  on the offending line why a given script raises its exception. Do not fix it.
+- Conditionals and control flow: `if`/`elif`/`else`, `for` loops, `while` loops, and
+  list comprehensions. A deliberate `while True` loop demonstrates manual interruption.
+- Functions follow immediately: structure, arguments, return values, docstrings, `help`,
+  `lambda` functions, and refactoring repeated code into reusable helpers.
+- Materials, in order: `modules/module05-conditionals`, `modules/module06-functions`.
+- Voluntary practice: `exercises/module05-control-flow-i.ipynb`,
+  `exercises/module05-control-flow-ii.ipynb`, `exercises/module06-functions-i.ipynb`,
+  `exercises/module06-functions-ii.ipynb`.
+- **In-class assignment 4 (10 min):** predict the output of a short loop with an `if`
+  condition and a function call, then explain `return` versus `print`. Answer two
+  questions in comments without changing the code.
 
-**Session 6 — 21 October · Association, hypothesis tests, and wrap-up**
+**Session 6 — 21 October · Graphing and wrap-up**
 
-- Data exploration, part 2: hypothesis testing with t-tests (two-sided and one-sided,
-  and across groups); association between two variables with `cov` and `corr`; scatter
-  plots; bin-scatters with equidistant bins and with equal numbers of observations per bin;
-  correlations within subgroups.
+- matplotlib first: the `Figure` and `Axes` objects, line and bar plots, axis limits,
+  labels, and legends. Students see the explicit, step-by-step plotting model first.
+- plotnine second: the grammar of graphics, mappings, layers, and basic chart types.
 - Course review and preparation for the closed-book final exam.
-- *Optional, time permitting* — a preview of Coding 2: introduction to regression with
-  binary means, binscatter, lowess, and a simple linear regression estimated with
-  `statsmodels`, including predictions, residuals, and identifying the best and worst hotel
-  deals. This material is not examinable in Coding 1.
-- Materials: `lectures/lecture07-data-exploration` (second part), and optionally
-  `lectures/lecture10-intro-to-regression`.
-- Voluntary practice: `exercises/lecture07-data-exploration-ii.ipynb`, and optionally
-  `exercises/lecture10-regression-i.ipynb`, `exercises/lecture10-regression-ii.ipynb`.
-- **In-class assignment (10 min):** name the concept over a correlation and bin-scatter script.
+- Materials: `modules/module07-graphs-basics`; start with `02_matplotlib_intro.ipynb`,
+  then use `01_plotnine_intro.ipynb`.
+- Voluntary practice: `exercises/module07-matplotlib.ipynb`,
+  `exercises/module07-plotnine-i.ipynb`, `exercises/module07-plotnine-ii.ipynb`.
+- **In-class assignment (10 min):** comment a figure script, explaining what each call adds.
+
+### Optional modules outside the exam scope
+
+- **Module 08 — Data exploration:** further descriptive statistics, grouped summaries,
+  distributions, hypothesis tests, and association. Materials:
+  `modules/module08-data-exploration`; practice: `exercises/module08-data-exploration-i.ipynb`
+  and `exercises/module08-data-exploration-ii.ipynb`.
+- **Module 09 — Exception handling:** `try`/`except`, exception types, and responding to
+  errors. Materials: `modules/module09-exception-handling`; practice:
+  `exercises/module09-exceptions.ipynb`.
+- **Module 10 — Introduction to regression:** a preview of Coding 2, including simple
+  regression, predictions, and residuals. Materials: `modules/module10-intro-to-regression`;
+  practice: `exercises/module10-regression-i.ipynb` and `exercises/module10-regression-ii.ipynb`.
+
+These three modules are optional and are not examined in Coding 1. Basic pandas inspection,
+summaries, and filtering already taught in Module 04 remain core material.
 
 ## Software and course materials
 
@@ -333,11 +341,11 @@ There is no required textbook. The following are supplementary and optional:
 - The official documentation for Python, pandas, plotnine, and matplotlib. Learning to read
   documentation is itself a course objective.
 
-Individual lecture READMEs list further material specific to each topic.
+Individual module READMEs list further material specific to each topic.
 
 ## Attribution
 
-Selected lecture materials are adapted from the MIT-licensed
+Selected module materials are adapted from the MIT-licensed
 `gabors-data-analysis/da-coding-python` course materials, which credit Peter Duronelly,
 Adam Vig, Agoston Reguly, and Gabor Bekes. See `NOTICE.md` for details.
 

@@ -18,14 +18,25 @@ This course will **not** use artificial intelligence tools or large language mod
 
 The course meets once per week for 100 minutes, on Wednesdays 15:40-17:20, for six sessions. The ordered plan is in `schedule/session_plan.md`.
 
-The first sessions introduce the Python working environment, notebooks, variables, expressions, strings, core data structures, and file I/O. The middle sessions develop pandas, data cleaning, control flow, and visualization. The final sessions cover functions, exceptions, and exploratory data analysis. Introductory regression is optional material that previews Coding 2.
+The first sessions introduce the Python working environment, notebooks, variables, expressions, strings, core data structures, and file I/O. Pandas continues through 7 October. On 14 October, control flow and conditionals are followed immediately by functions; graphing follows on 21 October. Data exploration, exception handling, and introductory regression remain available as optional material outside the Coding 1 exam scope.
+
+Materials are organized into **modules**, not one folder per class meeting. A session can cover more than one module. The remaining core sequence is:
+
+1. [Module 05: Conditionals and control flow](modules/module05-conditionals/)
+2. [Module 06: Functions](modules/module06-functions/)
+3. [Module 07: Graphing](modules/module07-graphs-basics/) — matplotlib before plotnine
+
+Assessment weights are 20% quizzes, 20% in-class assignments, and 60% final exam.
+The 7 October assignment did not take place and is excluded for everyone. The four
+assignments on 23 September, 30 September, 14 October, and 21 October are worth 5%
+each; the cancelled assignment is not a zero.
 
 ## Course Materials
 
-- `lectures/`: adapted lecture notebooks from `lecture00-intro` through `lecture10-intro-to-regression`
+- `modules/`: adapted module notebooks from `module00-intro` through `module10-intro-to-regression`
 - `exercises/`: short 10-20 minute practice notebooks for substantive class sessions
 - `data/README.md`: dataset inventory and external source notes
-- `scripts/fetch_data.py`: dataset fetch script for external OSF data used by selected lectures
+- `scripts/fetch_data.py`: dataset fetch script for external OSF data used by selected modules
 - `scripts/check_no_pip.py`: validation script that keeps student-facing materials on the `uv` workflow
 - `scripts/check_notebooks.py`: notebook validation for JSON, kernel metadata, imports, syntax, and local data references
 - `schedule/session_plan.md`: ordered session plan for the 2026 course
@@ -34,19 +45,21 @@ The first sessions introduce the Python working environment, notebooks, variable
 ### Live Class Notebooks
 
 The notebooks ending in `_duplicate.ipynb` contain the code we developed together
-in class. They sit alongside the prepared lecture notebooks:
+in class. They sit alongside the prepared module notebooks:
 
-- [Python basics: variables, numbers, and strings](lectures/lecture01-coding-basics/coding_basics_duplicate.ipynb)
-- [Collections: lists, tuples, dictionaries, and sets](lectures/lecture02-basic-structures/basic_structures_duplicate.ipynb)
-- [File paths with `os`](lectures/lecture03-data-IO/data_IO_duplicate.ipynb)
-- [Pandas: exploring and filtering hotel data](lectures/lecture04-pandas-basics/01_pandas_basics_duplicate.ipynb)
+- [Python basics: variables, numbers, and strings](modules/module01-coding-basics/coding_basics_duplicate.ipynb)
+- [Collections: lists, tuples, dictionaries, and sets](modules/module02-basic-structures/basic_structures_duplicate.ipynb)
+- [File paths with `os`](modules/module03-data-IO/data_IO_duplicate.ipynb)
+- [Pandas: exploring and filtering hotel data](modules/module04-pandas-basics/01_pandas_basics_duplicate.ipynb)
 
 To run them, use `uv sync` and then `uv run jupyter lab` from the repository root.
 Run one cell at a time: the basics and collections notebooks retain examples that
 raise errors (dividing a string, sorting a list containing numbers and a nested
 list, and changing a tuple). After inspecting an error, continue with the next
-cell. Saved outputs are cleared, so rerun cells to see their results. The pandas
-notebook needs an internet connection to read the course's hotel CSV from GitHub.
+cell. The control-flow notebook also has a deliberate infinite loop: run that cell
+alone and use the notebook toolbar's Interrupt/Stop button to stop it. The pandas
+notebooks read the prepared hotel CSV included in `modules/module04-pandas-basics/`.
+Saved outputs are cleared before publication; rerun cells to see their results.
 
 ## Learning Outcomes
 
@@ -59,9 +72,10 @@ By the end of Coding 1, students should be able to:
 - Load, inspect, clean, filter, transform, and summarize tabular data with pandas.
 - Create basic visualizations with plotnine and matplotlib.
 - Use conditionals, loops, comprehensions, and functions to make code reusable.
-- Handle common data workflow failures with defensive coding and exceptions.
-- Carry out introductory exploratory data analysis, including descriptive statistics, distributions, association, and simple hypothesis-test workflows.
-- Estimate and interpret introductory regression models using Python.
+
+Optional extensions, outside the exam scope, cover exception handling, further
+exploratory data analysis (including hypothesis tests and association), and introductory
+regression. Basic pandas inspection and summaries taught in Module 04 remain core material.
 
 ## Pedagogical Position
 
@@ -69,7 +83,7 @@ Coding 1 is intentionally about fundamentals. Students are expected to develop e
 
 ## Attribution
 
-Selected lecture materials are adapted from the MIT-licensed `gabors-data-analysis/da-coding-python` course materials. See `NOTICE.md` for details.
+Selected module materials are adapted from the MIT-licensed `gabors-data-analysis/da-coding-python` course materials. See `NOTICE.md` for details.
 
 ## AI Attribution
 

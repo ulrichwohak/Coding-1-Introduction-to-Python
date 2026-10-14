@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NOTEBOOK_ROOTS = (ROOT / "lectures", ROOT / "exercises")
+NOTEBOOK_ROOTS = (ROOT / "modules", ROOT / "exercises")
 EXPECTED_KERNEL = {"display_name": "Python 3 (ipykernel)", "language": "python", "name": "python3"}
 DATA_REF_RE = re.compile(r'DATA_DIR\s*/\s*["\']([^"\']+)["\']')
 CACHE_DIR = Path(tempfile.gettempdir()) / "coding1-notebook-check-cache"

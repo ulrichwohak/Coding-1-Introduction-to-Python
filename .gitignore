@@ -5,6 +5,11 @@ __pycache__/
 *.py[cod]
 scratch/
 
+# Private student records: never publish these folders.
+/grading/
+/gh-accounts-students/
+/gh-student-accounts/
+
 # Downloaded by scripts/fetch_data.py.
 data/raw/*
 !data/raw/.gitkeep
