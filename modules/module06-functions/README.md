@@ -30,7 +30,7 @@ After successfully live-coding the material (see: [`functions.ipynb`](functions.
 - how to call functions with positional arguments, keyword arguments, or both
 - how to document inputs, returned values, and side effects in a docstring
 - the use of the `help` function to retrieve function descriptions
-- the use of `lambda` function
+- how to use a `lambda` with `sorted()` to order hotel tuples by price, and how `key` works
 
 ## Module Time
 
