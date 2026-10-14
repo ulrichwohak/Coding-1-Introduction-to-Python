@@ -23,6 +23,8 @@ Downloaded source files in `data/raw/` are ignored by Git so the repository stay
 
 Merging and sample preparation happen in `scripts/fetch_data.py`, not in the module notebook. The detailed counts below document the prepared data for maintainers; the notebook asks students to discover these features by running code.
 
+The original [raw CSV URL](https://raw.githubusercontent.com/ulrichwohak/Coding-1-Introduction-to-Python/main/lectures/lecture04-pandas-basics/hotel_vienna_quotes.csv) remains supported for links already shared with students. `scripts/fetch_data.py` maintains an identical compatibility copy at `lectures/lecture04-pandas-basics/hotel_vienna_quotes.csv`. Keep both copies committed together when regenerating the data; new teaching materials should continue to use the local file under `modules/`.
+
 ### Sources and reproducible preparation
 
 For instructors maintaining the prepared CSV, run the standard data-preparation command from the repository root. This is not a student prerequisite for the GitHub-first lesson:

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import shutil
 import sys
 import urllib.error
 import urllib.request
@@ -102,6 +103,12 @@ def prepare_pandas_quotes() -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
     quotes.to_csv(target, index=False, lineterminator="\n")
     print(f"prepared: {target.relative_to(ROOT)} ({len(quotes)} quotes)")
+
+    # Preserve the raw GitHub URL already shared with students before the rename.
+    legacy_target = ROOT / "lectures" / "lecture04-pandas-basics" / target.name
+    legacy_target.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(target, legacy_target)
+    print(f"updated compatibility copy: {legacy_target.relative_to(ROOT)}")
 
 
 def main() -> int:
